@@ -1,8 +1,8 @@
 // document.querySelector("button").addEventListener("click", handleClick);
 
-var noOfButtons = document.querySelectorAll("button").length;
+var noOfButtons = document.querySelectorAll(".drum").length;
 for (var i = 0; i < noOfButtons; i++) {
-    document.querySelectorAll("button")[i].addEventListener("click", handleClick);
+    document.querySelectorAll(".drum")[i].addEventListener("click", handleClick);
 }
 
 function handleClick() {
