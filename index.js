@@ -2,9 +2,8 @@
 
 var noOfButtons = document.querySelectorAll(".drum").length;
 for (var i = 0; i < noOfButtons; i++) {
-    document.querySelectorAll(".drum")[i].addEventListener("click", handleClick);
-}
-
-function handleClick() {
-  alert("This is a click");
+    document.querySelectorAll(".drum")[i].addEventListener("click", function handleClick() {
+      var audio = new Audio('sounds/kick-bass.mp3');
+      audio.play();
+    });
 }
