@@ -52,6 +52,8 @@ for (var i = 0; i < noOfButtons; i++) {
 }
 
 // testing keydown function
-document.addEventListener("keydown", function () {
-  alert("keypress");
+// we can add event to the function parameter to show which event triggered the eventlistener, in this case which key was pressed
+// we can find 'keyCode' as a property of event if we check in the console
+document.addEventListener("keydown", function (event) {
+  console.log(event.keyCode);
 });
