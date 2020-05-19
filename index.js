@@ -83,4 +83,10 @@ function makeSound(key) {
 // make button animate
 function buttonAnimation(currentKey) {
 
+  // a variable to find the exact class of the button
+  var activeButton = document.querySelector("." + currentKey);
+
+  // add class to button if pressed
+  activeButton.classList.add("pressed");
+
 }
