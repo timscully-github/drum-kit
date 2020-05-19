@@ -10,6 +10,9 @@ for (var i = 0; i < noOfButtons; i++) {
       // use variant innerHTML from each button to be the key we use for the switch statement
       makeSound(buttonInnerHTML);
 
+      // call function for animation
+      buttonAnimation(buttonInnerHTML);
+
     });
 }
 
@@ -23,6 +26,9 @@ document.addEventListener("keydown", function (event) {
 
     // using the event keydown key to be the parameter of the key used for the switch statement once buttons have eventlisteners attached
     makeSound(event.key);
+
+    // call function for animation
+    buttonAnimation(event.key);
 
 });
 
@@ -70,4 +76,11 @@ function makeSound(key) {
       default: console.log(buttonInnerHTML);
 
     }
+}
+
+
+// !!!
+// make button animate
+function buttonAnimation(currentKey) {
+
 }
