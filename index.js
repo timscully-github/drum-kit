@@ -2,7 +2,7 @@
 // detecting button press
 var noOfButtons = document.querySelectorAll(".drum").length;
 for (var i = 0; i < noOfButtons; i++) {
-    document.querySelectorAll(".drum")[i].addEventListener("keydown", function () {
+    document.querySelectorAll(".drum")[i].addEventListener("click", function () {
 
       // find a variant of each button for the switch statement
       var buttonInnerHTML = this.innerHTML;
