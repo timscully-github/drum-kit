@@ -51,5 +51,7 @@ for (var i = 0; i < noOfButtons; i++) {
     });
 }
 
-var audio = new Audio('sounds/kick-bass.mp3');
-audio.play();
+// testing keydown function
+document.addEventListener("keydown", function () {
+  alert("keypress");
+});
