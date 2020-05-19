@@ -1,25 +1,37 @@
+// !!!
+// detecting button press
 var noOfButtons = document.querySelectorAll(".drum").length;
-
 for (var i = 0; i < noOfButtons; i++) {
     document.querySelectorAll(".drum")[i].addEventListener("keydown", function () {
 
       // find a variant of each button for the switch statement
       var buttonInnerHTML = this.innerHTML;
 
+      // use variant innerHTML from each button to be the key we use for the switch statement
+      makeSound(buttonInnerHTML);
+
     });
 }
 
-// testing keydown function
+
+// !!!
+// attaching what has been pressed to the function
+
 // we can add event to the function parameter to show which event triggered the eventlistener, in this case which key was pressed
 // we can find 'key' as a property of event if we check in the console
 document.addEventListener("keydown", function (event) {
-      console.log("This is one of the event keys: " + event.key);
+
+    // using the event keydown key to be the parameter of the key used for the switch statement once buttons have eventlisteners attached
+    makeSound(event.key);
+
 });
 
 
-function makeSound() {
+// !!!
+// using what we've pressed in a switch statement to give an output
+function makeSound(key) {
     // switch expression is the thing we 'switch on' so it knows what to look at for each 'case'
-    switch (buttonInnerHTML) {
+    switch (key) {
       case 'w':
         var audio = new Audio('sounds/kick-bass.mp3');
         audio.play();
