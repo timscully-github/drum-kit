@@ -89,4 +89,9 @@ function buttonAnimation(currentKey) {
   // add class to button if pressed
   activeButton.classList.add("pressed");
 
+  // allow class to be removed after activated
+  setTimeout(function(){
+    activeButton.classList.remove("pressed");
+  },250);
+
 }
