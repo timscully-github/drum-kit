@@ -92,6 +92,6 @@ function buttonAnimation(currentKey) {
   // allow class to be removed after activated
   setTimeout(function(){
     activeButton.classList.remove("pressed");
-  },250);
+  },100);
 
 }
